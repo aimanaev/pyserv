@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Стартовая страница</title>
+</head>
+<style type="text/css">
+    html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0px;
+        overflow: hidden;
+        opacity: 0.8;
+        /*
+        background: url('{{url_for('static', filename='images/113489.jpg')}}') no-repeat;
+        -moz-background-size: 100%;
+        -webkit-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
+        */
+    }
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 5px;
+        overflow: hidden;
+        background-color: rgb(235, 237, 242);
+        border: 1px solid rgb(235, 237, 242);
+        border-radius: 15px;
+    }
+    .content {
+        border-block: 1px solid;
+        writing-mode: horizontal-tb;
+        padding: 20px;
+    }
+    .detail {
+        height: 700px;
+        max-width: 600px;
+        margin: auto;
+        padding: 10px;
+        border: 5px solid rgb(235, 237, 242);
+        border-radius: 15px;
+    }
+    header {
+        padding: 20px;
+    }
+    footer {
+        padding: 20px;
+        background-color: rgb(188, 193, 204);
+        border-bottom-left-radius: 15px;
+        border-bottom-rigth-radius: 15px;
+    }
+</style>
+<body>
+    <!-- верхний колонтитул и навигация -->
+    <header>
+        <div>
+            <h1>Стартовая страница</h1>
+        </div>
+    </header>
+    <!-- основной контекст -->
+    <div class="content">
+        <div class="detail">
+            <a href="/api">get bean</a><br>
+            <a href="/api/100">get bean + 100</a><br>
+            <a href="/api/200">get bean + 200</a><br>
+			<br>
+            <a href="/api/reinit">bean reinit</a><br>
+            <br>
+        </div>
+    </div>
+
+    <!-- нижний колонтитул -->
+    <footer>
+        <font size="2">
+            <table border="0">
+                <tr><td>{{ calltime }}</td></tr>
+                <tr><td>© Self</td></tr>
+            </table>
+        </font>
+    </footer>
+
+</body>
+</html>
